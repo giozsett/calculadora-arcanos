@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arcanos do Tarô | Arcano Pessoal e Arcano Anual</title>
+  <meta name="description" content="Descubra seu Arcano Pessoal e o Arcano Anual de acordo com os arcanos maiores do tarô.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+</head>
+<body class="min-h-screen bg-noite-950 bg-estrelas bg-estrelas font-texto text-slate-200 antialiased">
+  <header class="border-b border-ouro-500/20">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="font-titulo text-lg tracking-widest text-ouro-300">✦ Arcanos</a>
+      <div class="flex gap-6 text-sm">
+        <a href="index.html" class="text-ouro-200" aria-current="page">Início</a>
+        <a href="calcular.html" class="text-slate-300 transition hover:text-ouro-200">Calcular</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="mx-auto max-w-5xl px-4 pb-16 pt-20 text-center sm:pt-28">
+      <p class="mb-4 font-titulo text-xs uppercase tracking-[0.4em] text-ouro-400">Os 22 Arcanos Maiores</p>
+      <h1 class="font-titulo text-4xl font-bold leading-tight text-ouro-200 sm:text-6xl">
+        Qual carta guia o seu caminho?
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-300">
+        A partir da sua data de nascimento, o tarô revela duas cartas especiais: o
+        <strong class="text-ouro-300">Arcano Pessoal</strong>, que acompanha você por toda a vida, e o
+        <strong class="text-ouro-300">Arcano Anual</strong>, que indica a energia de um ano específico.
+      </p>
+      <a href="calcular.html"
+         class="mt-10 inline-block rounded-full bg-ouro-400 px-8 py-3 font-titulo text-sm font-bold uppercase tracking-widest text-noite-950 shadow-lg shadow-ouro-500/20 transition hover:bg-ouro-300">
+        Descobrir meus arcanos
+      </a>
+    </section>
+
+    <section class="mx-auto grid max-w-5xl gap-6 px-4 pb-16 md:grid-cols-2">
+      <article id="arcano-pessoal" class="rounded-2xl border border-ouro-500/25 bg-noite-900/80 p-8">
+        <span class="text-3xl text-ouro-300" aria-hidden="true">☉</span>
+        <h2 class="mt-3 font-titulo text-2xl text-ouro-200">O que é o Arcano Pessoal?</h2>
+        <p class="mt-4 leading-relaxed text-slate-300">
+          É a carta que representa a sua essência. Calculado a partir da data de nascimento completa,
+          o Arcano Pessoal não muda ao longo da vida: ele simboliza seus talentos naturais, a forma como
+          você se expressa no mundo e os aprendizados que fazem parte da sua jornada.
+        </p>
+        <p class="mt-4 leading-relaxed text-slate-300">
+          Funciona como um espelho: mostra tanto as qualidades que podem ser desenvolvidas quanto
+          os desafios que pedem atenção.
+        </p>
+      </article>
+
+      <article id="arcano-anual" class="rounded-2xl border border-ouro-500/25 bg-noite-900/80 p-8">
+        <span class="text-3xl text-ouro-300" aria-hidden="true">☽</span>
+        <h2 class="mt-3 font-titulo text-2xl text-ouro-200">O que é o Arcano Anual?</h2>
+        <p class="mt-4 leading-relaxed text-slate-300">
+          É a carta que rege um ano específico da sua vida. Ele combina o dia e o mês do seu nascimento
+          com o ano que você deseja consultar, revelando a energia predominante, os temas e as
+          oportunidades daquele período.
+        </p>
+        <p class="mt-4 leading-relaxed text-slate-300">
+          Diferente do Arcano Pessoal, o Arcano Anual muda a cada ano, como um conselho para o ciclo
+          que está começando.
+        </p>
+      </article>
+    </section>
+
+    <section class="mx-auto max-w-5xl px-4 pb-20">
+      <div class="rounded-2xl border border-ouro-500/25 bg-noite-800/60 p-8">
+        <h2 class="font-titulo text-2xl text-ouro-200">Como o cálculo é feito</h2>
+        <p class="mt-4 leading-relaxed text-slate-300">
+          Os arcanos maiores vão de 1 a 22 (o 22 corresponde a <em>O Louco</em>, a carta 0).
+          Somamos os dígitos e, se o resultado passar de 22, somamos os dígitos novamente até
+          chegar a um número entre 1 e 22.
+        </p>
+
+        <div class="mt-6 grid gap-4 md:grid-cols-2">
+          <div class="rounded-xl bg-noite-950/70 p-5">
+            <h3 class="font-titulo text-sm uppercase tracking-widest text-ouro-400">Arcano Pessoal</h3>
+            <p class="mt-2 text-sm text-slate-400">Nascimento em 15/08/1990</p>
+            <p class="mt-3 font-mono text-sm text-slate-200">1+5+0+8+1+9+9+0 = 33 → 3+3 = <span class="text-ouro-300">6</span></p>
+            <p class="mt-2 text-sm text-slate-300">Resultado: <strong class="text-ouro-200">Os Enamorados</strong></p>
+          </div>
+          <div class="rounded-xl bg-noite-950/70 p-5">
+            <h3 class="font-titulo text-sm uppercase tracking-widest text-ouro-400">Arcano Anual de 2027</h3>
+            <p class="mt-2 text-sm text-slate-400">Dia e mês 15/08 + ano 2027</p>
+            <p class="mt-3 font-mono text-sm text-slate-200">1+5+0+8+2+0+2+7 = <span class="text-ouro-300">25</span> → 2+5 = <span class="text-ouro-300">7</span></p>
+            <p class="mt-2 text-sm text-slate-300">Resultado: <strong class="text-ouro-200">O Carro</strong></p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="calcular.html"
+             class="inline-block rounded-full border border-ouro-400 px-8 py-3 font-titulo text-sm font-bold uppercase tracking-widest text-ouro-200 transition hover:bg-ouro-400 hover:text-noite-950">
+            Fazer o meu cálculo
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-ouro-500/20 py-8 text-center text-sm text-slate-500">
+    <p>Calculadora de Arcanos · Projeto acadêmico de Ferramentas Ágeis</p>
+    <p class="mt-1">Conteúdo para fins de entretenimento e autoconhecimento.</p>
+  </footer>
+</body>
+</html>

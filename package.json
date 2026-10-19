@@ -1,0 +1,11 @@
+{
+  "name": "calculadora-arcanos",
+  "version": "1.0.0",
+  "description": "Calculadora de Arcano Pessoal e Arcano Anual com os arcanos maiores do tarô.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve@14 -l 8080 .",
+    "test": "node --test"
+  }
+}

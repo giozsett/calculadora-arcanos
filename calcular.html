@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calcular Arcanos | Arcanos do Tarô</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="js/tailwind.config.js"></script>
+</head>
+<body class="flex min-h-screen flex-col bg-noite-950 bg-estrelas bg-estrelas font-texto text-slate-200 antialiased">
+  <header class="border-b border-ouro-500/20">
+    <nav class="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+      <a href="index.html" class="font-titulo text-lg tracking-widest text-ouro-300">✦ Arcanos</a>
+      <div class="flex gap-6 text-sm">
+        <a href="index.html" class="text-slate-300 transition hover:text-ouro-200">Início</a>
+        <a href="calcular.html" class="text-ouro-200" aria-current="page">Calcular</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="mx-auto w-full max-w-xl flex-1 px-4 py-16">
+    <h1 class="text-center font-titulo text-3xl font-bold text-ouro-200 sm:text-4xl">Calcule seus arcanos</h1>
+    <p class="mt-4 text-center leading-relaxed text-slate-300">
+      Informe sua data de nascimento e o ano que deseja consultar. Vamos revelar o seu
+      Arcano Pessoal e o Arcano Anual correspondente.
+    </p>
+
+    <form id="formulario" action="resultado.html" method="get" novalidate
+          class="mt-10 space-y-6 rounded-2xl border border-ouro-500/25 bg-noite-900/80 p-8 shadow-2xl shadow-black/40">
+      <div>
+        <label for="nascimento" class="block font-titulo text-sm uppercase tracking-widest text-ouro-300">
+          Data de nascimento
+        </label>
+        <input id="nascimento" name="nascimento" type="date" required min="1900-01-01"
+               aria-describedby="erro-nascimento"
+               class="mt-2 w-full rounded-lg border border-noite-700 bg-noite-950 px-4 py-3 text-slate-100 [color-scheme:dark] focus:border-ouro-400 focus:outline-none focus:ring-2 focus:ring-ouro-400/40">
+        <p id="erro-nascimento" class="mt-2 hidden text-sm text-rose-300" role="alert"></p>
+      </div>
+
+      <div>
+        <label for="ano" class="block font-titulo text-sm uppercase tracking-widest text-ouro-300">
+          Ano do Arcano Anual
+        </label>
+        <input id="ano" name="ano" type="number" inputmode="numeric" required min="1900" max="2100" step="1"
+               aria-describedby="dica-ano erro-ano"
+               class="mt-2 w-full rounded-lg border border-noite-700 bg-noite-950 px-4 py-3 text-slate-100 focus:border-ouro-400 focus:outline-none focus:ring-2 focus:ring-ouro-400/40">
+        <p id="dica-ano" class="mt-2 text-sm text-slate-400">Por exemplo, o ano atual ou o próximo.</p>
+        <p id="erro-ano" class="mt-2 hidden text-sm text-rose-300" role="alert"></p>
+      </div>
+
+      <button type="submit"
+              class="w-full rounded-full bg-ouro-400 px-8 py-3 font-titulo text-sm font-bold uppercase tracking-widest text-noite-950 shadow-lg shadow-ouro-500/20 transition hover:bg-ouro-300 focus:outline-none focus:ring-2 focus:ring-ouro-200">
+        Revelar minhas cartas
+      </button>
+    </form>
+  </main>
+
+  <footer class="border-t border-ouro-500/20 py-8 text-center text-sm text-slate-500">
+    <p>Calculadora de Arcanos · Projeto acadêmico de Ferramentas Ágeis</p>
+  </footer>
+
+  <script type="module" src="js/calcular.js"></script>
+</body>
+</html>
